@@ -72,11 +72,11 @@ Each user, can create a community and (automatically) gets assigned the Communit
 
 # Outputs:
 
-<img scr="outputs/signin.png"  width="700" height="500">
-<img scr="outputs/Get-me.png"  width="700" height="500">
-<img scr="outputs/Get-all-community-members.png"  width="700" height="500">
-<img scr="outputs/Get-all-community.png"  width="700" height="500">
-<img scr="outputs/get-my-owned-community.png"  width="700" height="500">
-<img scr="outputs/Create-member.png"  width="700" height="500">
-<img scr="outputs/Create-community.png"  width="700" height="500">
-<img scr="outputs/delete-member.png"  width="700" height="500">
+<img src="outputs/signin.png"  width="700" height="500">
+<img src="outputs/Get-me.png"  width="700" height="500">
+<img src="outputs/Get-all-community-members.png"  width="700" height="500">
+<img src="outputs/Get-all-community.png"  width="700" height="500">
+<img src="outputs/get-my-owned-community.png"  width="700" height="500">
+<img src="outputs/Create-member.png"  width="700" height="500">
+<img src="outputs/Create-community.png"  width="700" height="500">
+<img src="outputs/delete-member.png"  width="700" height="500">
