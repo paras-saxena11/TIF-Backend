@@ -68,17 +68,6 @@ const createMember = async (req, res) => {
         });
       }
     }
-    // if (communityMember.community_id === communityDoc._id) {
-    //   return res.status(400).json({
-    //     status: false,
-    //     errors: [
-    //       {
-    //         message: "User is already added in the community.",
-    //         code: "RESOURCE_EXISTS",
-    //       },
-    //     ],
-    //   });
-    // }
     const roleFound = await Role.findOne({ _id: role });
     if (!roleFound) {
       return res.status(400).json({
