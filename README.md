@@ -72,11 +72,46 @@ Each user, can create a community and (automatically) gets assigned the Communit
 
 # Outputs:
 
+#### Create-Role
+
+<img src="outputs/create-role.png"  width="700" height="500">
+
+#### GET-Role
+
+<img src="outputs/get-role.png"  width="700" height="500">
+
+#### Signup
+
+<img src="outputs/signup.png"  width="700" height="500">
+
+#### Sign-in
+
 <img src="outputs/signin.png"  width="700" height="500">
+
+#### Get-Me
+
 <img src="outputs/Get-me.png"  width="700" height="500">
+
+#### Get all community members
+
 <img src="outputs/Get-all-community-members.png"  width="700" height="500">
+
+#### Get all communities
+
 <img src="outputs/Get-all-community.png"  width="700" height="500">
+
+#### Get my owned communities
+
 <img src="outputs/get-my-owned-community.png"  width="700" height="500">
-<img src="outputs/Create-member.png"  width="700" height="500">
+
+#### Create Community
+
 <img src="outputs/Create-community.png"  width="700" height="500">
+
+#### Delete Member
+
 <img src="outputs/delete-member.png"  width="700" height="500">
+
+#### Create Member
+
+<img src="outputs/Create-member.png"  width="700" height="500">
