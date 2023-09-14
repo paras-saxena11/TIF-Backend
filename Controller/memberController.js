@@ -2,7 +2,6 @@ const Community = require("../Models/communityModel");
 const Role = require("../Models/roleModel");
 const Member = require("../Models/memberModel");
 const User = require("../Models/userModel");
-const mongoose = require("mongoose");
 
 const createMember = async (req, res) => {
   try {
@@ -55,18 +54,31 @@ const createMember = async (req, res) => {
         ],
       });
     }
-    const communityMember = await Member.findOne({ user_id: user });
-    if (communityMember.community_id === communityDoc._id) {
-      return res.status(400).json({
-        status: false,
-        errors: [
-          {
-            message: "User is already added in the community.",
-            code: "RESOURCE_EXISTS",
-          },
-        ],
-      });
+    const communityMembers = await Member.find({ community_id: community });
+    for (const communityMember of communityMembers) {
+      if (communityMember.user_id.toString() === userMember._id.toString()) {
+        return res.status(400).json({
+          status: false,
+          errors: [
+            {
+              message: "User is already added in the community.",
+              code: "RESOURCE_EXISTS",
+            },
+          ],
+        });
+      }
     }
+    // if (communityMember.community_id === communityDoc._id) {
+    //   return res.status(400).json({
+    //     status: false,
+    //     errors: [
+    //       {
+    //         message: "User is already added in the community.",
+    //         code: "RESOURCE_EXISTS",
+    //       },
+    //     ],
+    //   });
+    // }
     const roleFound = await Role.findOne({ _id: role });
     if (!roleFound) {
       return res.status(400).json({
@@ -124,10 +136,12 @@ const deleteMember = async (req, res) => {
         ],
       });
     }
+    // console.log(member);
     const role = await Role.findOne({ _id: member.role_id });
 
     //check role
     const roleAdmin = role.name;
+    // console.log(roleAdmin);
     if (
       roleAdmin !== "Community Admin" &&
       roleAdmin !== "Community Moderator"
@@ -137,7 +151,7 @@ const deleteMember = async (req, res) => {
         errors: [
           {
             message: "You are not authorized to perform this action.",
-            code: "NOT_ALLOWED_ACCESS",
+            code: "NOT_ALLOWED_ACCESS R",
           },
         ],
       });

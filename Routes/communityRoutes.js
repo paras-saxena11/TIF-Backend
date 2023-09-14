@@ -20,6 +20,7 @@ router.get(
   communityController.getMyOwnedCommunity
 );
 
+//to get my joined community
 router.get(
   "/me/member",
   authMiddleware,

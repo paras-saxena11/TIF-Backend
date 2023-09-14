@@ -2,7 +2,6 @@ const Community = require("../Models/communityModel");
 const Role = require("../Models/roleModel");
 const Member = require("../Models/memberModel");
 const User = require("../Models/userModel");
-const mongoose = require("mongoose");
 
 const createCommunity = async (req, res) => {
   try {
@@ -180,11 +179,6 @@ const getMyOwnedCommunity = async (req, res) => {
 
     const total = communities.length;
     const totalPages = Math.ceil(total / perPage);
-
-    // const startIndex = (page - 1) * perPage;
-    // const endIndex = startIndex + perPage;
-    // // Slice the 'members' array to get members for the requested page
-    // const membersForPage = communities.slice(startIndex, endIndex);
 
     const meta = {
       total,
